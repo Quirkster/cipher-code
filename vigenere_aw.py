@@ -35,6 +35,9 @@ def translateMessage(key, message, mode):
                 translated.append(LETTERS[num])
             elif symbol.islower():
                 translated.append(LETTERS[num].lower())
+            keyIndex += 1
+            if keyIndex == len(key):
+                keyIndex = 0
         else:
             translated.append(symbol)
     return ''.join(translated)
